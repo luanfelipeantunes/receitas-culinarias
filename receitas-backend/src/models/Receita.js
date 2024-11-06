@@ -18,12 +18,12 @@ const Receita = sequelize.define('Receita', {
     },
 
     tempo_preparo:{
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: false
     },
 
     rendimento:{
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: false
     },
 });
