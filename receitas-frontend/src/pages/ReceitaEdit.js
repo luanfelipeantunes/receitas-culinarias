@@ -25,7 +25,7 @@ function ReceitaEdit() {
     const handleSubmit = () => {
         axios.put(constants.baseUrl + '/receitas/' + id, receita)
             .then(() => {
-                navigate("/receitas");
+                navigate("/receitas/show/" + id);
             })
             .catch((error) => {
                 console.log(error);

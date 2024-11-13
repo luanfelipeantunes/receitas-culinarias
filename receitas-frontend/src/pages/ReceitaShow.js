@@ -43,9 +43,9 @@ function ReceitaShow() {
             <p><small>Modo de preparo</small></p>
                 <p>{receita.modo_preparo}</p>
             <p><small>Tempo para ser preparado</small></p>
-                <p>{receita.tempo_preparo}</p>
+                <p>{receita.tempo_preparo}min</p>
             <p><small>Rendimento</small></p>
-                <p>{receita.rendimento}</p>
+                <p>{receita.rendimento} unidades</p>
                 <div>
                 <button type="button" className="btn btn-danger" onClick={handleDelete}>Exluir</button>
                 <button type="button" className="btn btn-edit" onClick={() => navigate(`/receitas/edit/${id}`)}>Editar</button>
