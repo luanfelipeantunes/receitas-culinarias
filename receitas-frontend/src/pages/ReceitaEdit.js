@@ -34,29 +34,38 @@ function ReceitaEdit() {
     return (
         <>
             <div>
-                <div>
+            <header>
+                <h1>Receitas Culinárias</h1>
+                <p>Encontre as melhores receitas para sua cozinha.</p>
+            </header>
+            <p><small class="small">Edite sua receita escolhida</small></p>
+            <div class="container">
+            <div class="block">
                     <label>Titulo: </label>
                     <input name="titulo" type="text" placeholder="Digite o título da receita" onChange={handleChange} value={receita.titulo}/>
                 </div>
-                <div>
+                <div class="block">
                     <label>ingredientes: </label>
                     <input name="ingredientes" type="text" placeholder="Digite os ingredientes" onChange={handleChange} value={receita.ingredientes}/>
                 </div>
-                <div>
+                <div class="block">
                     <label>Modo de preparo: </label>
                     <input name="modo_preparo" type="text" placeholder="Descreva o modo de preparo" onChange={handleChange} value={receita.modo_preparo}/>
                 </div>
-                <div>
+                <div class="block">
                     <label>Tempo de preparo: </label>
                     <input name="tempo_preparo" type="text" placeholder="Informe o tempo de preparo em MINUTOS" onChange={handleChange} value={receita.tempo_preparo}/>
                 </div>
-                <div>
+                <div class="block">
                     <label>Rendimento </label>
                     <input name="rendimento" type="text" placeholder="Rendimento (unidades)" onChange={handleChange} value={receita.rendimento}/>
                 </div>
 
-                <button type="button" className="btn btn-primary" onClick={handleSubmit}>Salvar</button>
-                <button type="button" class="btn btn-secondary" onClick={() => navigate('/receitas')}>Cancelar</button>
+                <button type="button" className="btn btn-salvar" onClick={handleSubmit}>Salvar</button>
+                <button type="button" class="btn btn-cancell" onClick={() => navigate('/receitas')}>Cancelar</button>
+
+            </div>
+                
             </div>
         </>
     )
