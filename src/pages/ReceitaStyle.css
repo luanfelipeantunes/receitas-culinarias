@@ -1,0 +1,9 @@
+.receita-card{
+    background-color: aqua;
+    display: flex;
+    width: 10%;
+    border-radius: 8px;
+    align-content: center;
+    justify-content: center;
+    margin: 16px;
+}

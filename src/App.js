@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ReceitasIndex from './pages/ReceitasIndex';
+import ReceitaShow from './pages/ReceitaShow';
+import ReceitaNew from './pages/ReceitaNew';
+import ReceitaEdit from './pages/ReceitaEdit';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<ReceitasIndex />} />
+        <Route path="/receitas" element={<ReceitasIndex />} />
+        <Route path="/receitas/show/:id" element={<ReceitaShow />} />
+        <Route path="/receitas/new" element={<ReceitaNew isCreating />} />
+        <Route path='/receitas/edit/:id' element={<ReceitaEdit />} />
+      </Routes>
+    </Router>
   );
 }
 
